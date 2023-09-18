@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for num in range(97, 123):
-    print(str(chr(num)), end="")
+    print("{0}".format(chr(num)), end="")
