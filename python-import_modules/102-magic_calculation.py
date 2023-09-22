@@ -3,27 +3,14 @@ import dis
 
 
 def magic_calculation(a, b):
-    from calculator_1 import add, sub, mul, div
-    from sys import argv
+    from magic_calculation_102 import add, sub
 
-    if len(argv) - 1 < 3:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        exit(1)
-
-    a, b = int(argv[1]), int(argv[3])
-    op = argv[2]
-    if op == "+":
-        resu = add(a, b)
-    elif op == "-":
-        resu = sub(a, b)
-    elif op == "*":
-        resu = mul(a, b)
-    elif op == "/":
-        resu = div(a, b)
+    if a > b:
+        c = add(a, b)
+        return c
     else:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
-    print("{} {} {} = {}".format(a, argv[2], b, resu))
+        c = sub(a, b)
+        return c
 
 
 dis.dis(magic_calculation)
