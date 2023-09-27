@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
         return None
 
     if not isinstance(roman_string, str):
-        return None
+        return 0
 
     rom_dic = {
         'I': 1,
