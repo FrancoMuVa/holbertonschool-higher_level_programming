@@ -3,6 +3,9 @@ def roman_to_int(roman_string):
     if not roman_string:
         return None
 
+    if not isinstance(roman_string, str):
+        return None
+
     rom_dic = {
         'I': 1,
         'V': 5,
