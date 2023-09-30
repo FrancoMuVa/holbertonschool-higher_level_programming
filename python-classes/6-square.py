@@ -40,14 +40,16 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        flag = True
         if self.__position[1] == 1:
+            flag = False
             print()
-        for _ in range(self.__size - 1):
+        for _ in range(self.__size):
             print("{}{}".format(" " * self.__position[0], "#" * self.__size))
 
         print("{}{}".format(" " * self.__position[0], "#" * self.__size))
 
-        if self.__size == 0:
+        if self.__size == 0 and not flag and self.__position[0] == 0:
             print()
 
     @property
