@@ -86,3 +86,13 @@ Test - 16:
 >>> matrix_divided([[1, 2, float('inf')], [4, 5, 6]], 2.55)
 [[0.39, 0.78, inf], [1.57, 1.96, 2.35]]
 
+
+Test - 17:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "Hello")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+
+Test - 18:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -2)
+[[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0]]
