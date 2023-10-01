@@ -71,7 +71,18 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists)                of integers/floats
 
 
-Test - 13:
+Test - 14:
 >>> matrix_divided([(1, 2, 3), [4, 5, 6]], 2)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists)            of integers/floats
+
+
+Test - 15:
+>>> matrix_divided([[1, 2, float('NaN')], [4, 5, 6]], 2.55)
+[[0.39, 0.78, nan], [1.57, 1.96, 2.35]]
+
+
+Test - 16:
+>>> matrix_divided([[1, 2, float('inf')], [4, 5, 6]], 2.55)
+[[0.39, 0.78, inf], [1.57, 1.96, 2.35]]
+
