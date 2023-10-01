@@ -25,6 +25,9 @@
 >>> add_integers(2.40, 2.35)
 4
 
+>>> add_integers(2)
+100
+
 
 >>> add_integers(5, "Hello")
 Traceback(most recent call last):
