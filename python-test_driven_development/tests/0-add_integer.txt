@@ -27,27 +27,30 @@
 >>> add_integer(2.40, 2.35)
 4
 
+>>> add_integer(-2.23, -2.79)
+-4
+
 >>> add_integer(2)
 100
 
 
 >>> add_integer(5, "Hello")
-Traceback(most recent call last):
+Traceback (most recent call last):
 TypeError: b must be an integer
 
 
 >>> add_integer([2], 5)
-Traceback(most recent call last):
+Traceback (most recent call last):
 TypeError: a must be an integer
 
 
 >>> add_integer((2, 8), 3)
-Traceback(most recent call last):
+Traceback (most recent call last):
 TypeError: a must be an integer
 
 
 >>> add_integer({3}, 2)
-Traceback(most recent call last):
+Traceback (most recent call last):
 TypeError: a must be an integer
 
 
@@ -58,12 +61,12 @@ TypeError: b must be an integer
 
 >>> add_integer(2, float('inf'))
 Traceback (most recent call last):
-OverflowError: cannot convert float infinity to intege
+OverflowError: cannot convert float infinity to integer
 
 
 >>> add_integer(2, -float('inf'))
 Traceback (most recent call last):
-OverflowError: cannot convert float infinity to intege
+OverflowError: cannot convert float infinity to integer
 
 
 >>> add_integer(2, float('NaN'))
