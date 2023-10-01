@@ -1,0 +1,114 @@
+#-----------------------------------------------------
+# Test - 1:
+>>> add_integers(2, 2)
+4
+
+
+#-----------------------------------------------------
+# Test - 2:
+>>> add_integers(2, -2)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 3:
+>>> add_integers(-2, 2)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 4:
+>>> add_integers(-2, -2)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 5:
+>>> add_integers(2, 2.35)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 6:
+>>> add_integers(2.40, 2)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 7:
+>>> add_integers(2.40, 2.35)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 8:
+>>> add_integers(5, "Hello")
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 9:
+>>> add_integers([2], 5)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 10:
+>>> add_integers((2, 8), 3)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 11:
+>>> add_integers({3}, 2)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 12:
+>>> add_integers(12, None)
+Traceback(most recent call last):
+
+TypeError: a most be an integer or b most be an integer
+
+
+#-----------------------------------------------------
+# Test - 13:
+>>> add_integers(2, float(inf))
+Traceback(most recent call last):
+
+OverflowError: cannot convert float infinity to integer
+
+
+#-----------------------------------------------------
+# Test - 14:
+>>> add_integers(2, float(nan))
+Traceback(most recent call last):
+
+ValueError: cannot convert float NaN to integer
+
+
+#-----------------------------------------------------
+# Test - 15:
+>>> add_integers(2e10, 4)
+20000000004
