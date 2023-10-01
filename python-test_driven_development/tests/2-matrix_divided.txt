@@ -1,0 +1,71 @@
+==================================
+Matrix divided - Tests
+==================================
+
+# File .txt to test if 'matrix_divided' function works correctly.
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test - 1:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+
+Test - 2:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+
+Test - 3:
+>>> matrix_divided([[1, 2, -3], [4, 5, 6]], 3)
+[[0.33, 0.67, -1.0], [1.33, 1.67, 2.0]]
+
+
+Test - 4:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+Test - 5:
+>>> matrix_divided([[1, 2, 3, 5, 6], [4, 5, 6]], 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Test - 6:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+
+Test - 7:
+>>> matrix_divided([[1, 2, 3]], 2)
+[[0.5, 1.0, 1.5]]
+
+
+Test - 8:
+>>> matrix_divided([None], 2)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
+
+Test - 9:
+>>> matrix_divided([[1, 2, 3], [None]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists)                of integers/floats
+
+
+Test - 10:
+>>> matrix_divided([[0, 0, 0], [0, 0, 0]], 2)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+Test - 11:
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2.55)
+[[0.39, 0.78, 1.18], [1.57, 1.96, 2.35]]
+
+
+Test - 12:
+>>> matrix_divided([[1, "Two", 3], [4, 5, 6]], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists)                of integers/floats
