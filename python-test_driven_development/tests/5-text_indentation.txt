@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 Test - 2:
 >>> text_indentation(" ? ? ? '? ? ? ' p?")
-?
+ ?
 <BLANKLINE>
 ?
 <BLANKLINE>
@@ -95,11 +95,11 @@ Test - 12:
 <BLANKLINE>
 3?
 <BLANKLINE>
-
+4
 
 Test - 13:
 >>> text_indentation(" . ? :")
-.
+ .
 <BLANKLINE>
 ?
 <BLANKLINE>
