@@ -102,3 +102,18 @@ Test - 19:
 >>> matrix_divided([], 3)
 Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists)        of integers/floats
+
+
+Test - 20:
+>>> matrix_divided([[1.1, -2.2, -3.3, -4.4], [-5.5, 6.6, 7.7, 8.8]], 3)
+[[0.37, -0.73, -1.1, -1.47], [-1.83, 2.2, 2.57, 2.93]]
+
+
+Test - 21:
+>>> matrix_divided([[10, 99, 99.40], [ 10.99, 9.9999, 13], [50, 4.87432, 321]], 3)
+[[3.33, 33.0, 33.13], [3.66, 3.33, 4.33], [16.67, 1.62, 107.0]]
+
+
+Test - 22:
+>>> matrix_divided([[], [], []], 3)
+[[], [], []]
