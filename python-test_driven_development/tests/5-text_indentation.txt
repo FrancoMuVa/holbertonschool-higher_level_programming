@@ -1,0 +1,98 @@
+==================================================
+Tests to test text_indentation function.
+==================================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test - 1:
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+
+
+Test - 2:
+>>> text_indentation(" ? ? ? '? ? ? ' p?")
+ ?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+'?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+' p?
+<BLANKLINE>
+
+
+Test - 3:
+>>> text_indentation("Hello, My name is Franco. ??")
+Hello, My name is Franco.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+
+
+Test - 4:
+>>> text_indentation(["hello  My name is FrAnco"])
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+Test - 5:
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+
+
+Test - 6:
+>>> text_indentation("")
+
+
+Test - 7:
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+Test - 8:
+>>> text_indentation(":", "Hello My Name Is Franco")
+Traceback (most recent call last):
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+
+Test - 9:
+>>> text_indentation(":")
+:
+<BLANKLINE>
+
+
+Test - 10:
+>>> text_indentation("?")
+?
+<BLANKLINE>
+
+
+Test - 11:
+>>> text_indentation(".")
+.
+<BLANKLINE>
+
+
+Test - 12:
+>>> text_indentation("1:2.3?4")
+1:
+<BLANKLINE>
+2.
+<BLANKLINE>
+3?
+<BLANKLINE>
+4
