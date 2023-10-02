@@ -20,8 +20,5 @@ def text_indentation(text):
             print("{}".format(text[i]))
             print()
 
-        elif (not (text[i] == " " and text[i - 1] in '.?:')):
-            print("{}".format(text[i]), end="")
-
-        elif i == 0 and text[i] != " ":
+        elif (not(text[i] == " " and text[i - 1] in '.?:')) or i == 0:
             print("{}".format(text[i]), end="")
