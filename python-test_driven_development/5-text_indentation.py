@@ -15,10 +15,14 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    for i in range(len(text)):
-        if text[i] in '.?:':
-            print("{}".format(text[i]))
-            print()
-
-        elif (not(text[i] == " " and text[i - 1] in '.?:')) or i == 0:
-            print("{}".format(text[i]), end="")
+    my_list = []
+    line = ""
+    for ch in text:
+        line += ch
+        if ch in '.?:':
+            my_list.append(line.strip())
+            line = ""
+    
+    for item in my_list:
+        print("{}".format(item))
+        print()
