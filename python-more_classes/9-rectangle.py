@@ -14,17 +14,8 @@ class Rectangle:
                 width (int, optional): The width of Rectangle.
                 height (int, optional): The height of Rectangle.
         """
-        if not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = height
-
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = width
+        self.height = height
+        self.width = width
         Rectangle.number_of_instances += 1
 
     print_symbol = "#"
@@ -104,4 +95,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """  Returns a new Rectangle instance """
-        return Rectangle(size, size)
+        return cls(size, size)
