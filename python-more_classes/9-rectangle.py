@@ -14,8 +14,8 @@ class Rectangle:
                 width (int, optional): The width of Rectangle.
                 height (int, optional): The height of Rectangle.
         """
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     print_symbol = "#"
