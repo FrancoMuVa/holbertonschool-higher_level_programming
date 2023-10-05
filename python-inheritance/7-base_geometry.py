@@ -4,7 +4,7 @@
 """
 
 
-class BaseGeometry:
+class BaseGeometry():
     """ Base Geometry """
     def area(self):
         """ Raise a exeption """
