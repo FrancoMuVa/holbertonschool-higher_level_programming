@@ -1,4 +1,4 @@
-""" 
+"""
     Class Base Geometry.
 """
 
@@ -8,6 +8,7 @@ class BaseGeometry:
     def area(self):
         """ Raise a exeption """
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """ Validates value """
         if isinstance(name, str):
