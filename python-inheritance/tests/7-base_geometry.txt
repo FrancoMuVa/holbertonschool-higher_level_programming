@@ -82,12 +82,13 @@ Test - 13:
 
 Test - 14:
 >>> bg.integer_validator("Pep", True)
-
+Traceback (most recent call last):
+TypeError: Pep must be an integer
 
 Test - 15:
 >>> bg.integer_validator("Pep", False)
 Traceback (most recent call last):
-ValueError: Pep must be greater than 0
+TypeError: Pep must be an integer
 
 
 Test - 16:
