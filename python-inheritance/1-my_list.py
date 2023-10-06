@@ -6,6 +6,7 @@
 
 class MyList(list):
     """ MyList class that inherits form list """
+
     def print_sorted(self):
         """ Prints a sorted list in ascending order """
         if all(isinstance(e, int) for e in self):
