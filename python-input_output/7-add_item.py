@@ -1,8 +1,14 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 from os.path import exists
-save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
+save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+
+
+"""
+    Script that adds all arguments to a Python list,
+    and then save them to a file
+"""
 
 
 if exists("add_item.json"):
@@ -10,8 +16,8 @@ if exists("add_item.json"):
 else:
     my_list = []
 
-argc = len(sys.argv)
+argc = len(argv)
 for i in range(1, argc):
-    my_list.append(sys.argv[i])
+    my_list.append(argv[i])
 
 save_to_json_file(my_list, "add_item.json")
