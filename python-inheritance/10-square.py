@@ -54,7 +54,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """ Initialize a Squere object """
         self.__size = size
-        super().__init__(self.size, self.size)
+        super().__init__(self.__size, self.__size)
 
     def area(self):
         """ Calculate the area of Square """
