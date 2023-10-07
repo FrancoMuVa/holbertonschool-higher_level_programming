@@ -10,3 +10,4 @@ def read_file(filename=""):
         read_f = f.read()
         for line in read_f:
             print(line, end="")
+        f.close()
