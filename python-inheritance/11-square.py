@@ -29,10 +29,10 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """ Initialize a Rectangle object """
-        self.__width = width
-        self.__height = height
         self.integer_validator("width", width)
+        self.__width = width
         self.integer_validator("height", height)
+        self.__height = height
 
     def area(self):
         """ Calculate the area """
@@ -53,9 +53,14 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """ Initialize a Squere object """
-        super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
+
+    def area(self):
+        """ Calculate the area of Square """
+        return self.__size * self.__size
 
     def __str__(self):
-        """ Return a string representation of rectangle """
-        return f"[Square] { self.__size}/{self.__size}"
+        """ Return a representation of square """
+        return f"[Square] {self.__size}/{self.__size}"
