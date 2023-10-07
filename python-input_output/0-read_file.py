@@ -6,7 +6,7 @@
 
 def read_file(filename=""):
     """ Read file """
-    with open('my_file_0.txt', 'r', encoding="utf=8") as f:
+    with open('my_file_0.txt', 'r', encoding="utf8") as f:
         read_f = f.read()
         for line in read_f:
             print(line, end="")
