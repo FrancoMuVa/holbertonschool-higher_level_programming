@@ -28,8 +28,11 @@ class Rectangle(BaseGeometry):
     """ Rectangle """
 
     def __init__(self, width, height):
-        """ Initialize a Rectangle object """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        """
+            Initialize a Rectangle object 
+        """
+        super().integer_validator("width", width)
         self.__width = width
+        
+        super().integer_validator("height", height)
         self.__height = height

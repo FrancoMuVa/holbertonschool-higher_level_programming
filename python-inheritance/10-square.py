@@ -52,10 +52,12 @@ class Square(Rectangle):
     """ Squere """
 
     def __init__(self, size):
-        """ Initialize a Squere object """
-        self.integer_validator("size", size)
-        self.__size = size
+        """
+            Initialize a Squere object
+        """
+        super().integer_validator("size", size)
         super().__init__(size, size)
+        self.__size = size
 
     def area(self):
         """ Calculate the area of Square """
