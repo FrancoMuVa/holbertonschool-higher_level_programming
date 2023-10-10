@@ -87,7 +87,7 @@ class Rectangle(Base):
 
     def area(self):
         """ Returns the area of Rectangle """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def display(self):
         """ prints in stdout the Rectangle instance with the character # """
@@ -98,5 +98,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """ Returns a string with the reprecentation of the Rectangle """
-        x_y_width_height = f"{self.x}/{self.y} - {self.width}/{self.height}"
-        return f"[Rectangle] ({self.id}) {x_y_width_height}"
+        x_y = f"{self.__x}/{self.__y}"
+        width_height = f"{self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {x_y} - {width_height}"
