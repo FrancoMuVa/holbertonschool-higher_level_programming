@@ -102,8 +102,21 @@ class Rectangle(Base):
         width_height = f"{self.__width}/{self.__height}"
         return f"[Rectangle] ({self.id}) {x_y} - {width_height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Updates argument to each attribute """
+        if not args:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
+
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
