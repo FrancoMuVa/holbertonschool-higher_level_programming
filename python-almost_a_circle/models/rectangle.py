@@ -16,7 +16,7 @@ class Rectangle(Base):
 
             Args:
                 width:  (int) The width of rectangle.
-                heigth: (int) The height of the rectangle.
+                height: (int) The height of the rectangle.
                 x:      (int, optional) The x coordinate.
                 y:      (int, optional) The x coordinate.
                 id:     (int, optional) The ID value.
@@ -51,9 +51,9 @@ class Rectangle(Base):
     def height(self, value):
         """ Setter for the height attribute. """
         if type(value) is not int:
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("heigth must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
