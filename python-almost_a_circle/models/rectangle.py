@@ -103,7 +103,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {x_y} - {width_height}"
 
     def update(self, *args):
-        """  """
+        """ Updates argument to each attribute """
         if len(args) > 0:
             self.id = args[0]
         if len(args) > 1:
