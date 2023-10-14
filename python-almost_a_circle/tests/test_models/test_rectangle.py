@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.y, 0)
         self.assertIsNotNone(r.id)
 
-    def test_width_validation(self):
+    def testWidthValidation(self):
         with self.assertRaises(ValueError):
             r = Rectangle(-5, 10)
         with self.assertRaises(TypeError):
@@ -30,7 +30,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.width = True
 
-    def test_height_validation(self):
+    def testHeightValidation(self):
         with self.assertRaises(ValueError):
             r = Rectangle(5, -10)
         with self.assertRaises(TypeError):
@@ -47,7 +47,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.height = True
 
-    def test_x_validation(self):
+    def testXValidation(self):
         with self.assertRaises(ValueError):
             r = Rectangle(5, 10, -1)
         with self.assertRaises(TypeError):
@@ -64,7 +64,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.x = True
 
-    def test_y_validation(self):
+    def testYValidation(self):
         with self.assertRaises(ValueError):
             r = Rectangle(5, 10, 1, -1)
         with self.assertRaises(TypeError):
@@ -81,7 +81,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.y = True
 
-    def test_area(self):
+    def testArea(self):
         r = Rectangle(10, 10)
         self.assertEqual(r.area(), 100)
         r.width = 6
