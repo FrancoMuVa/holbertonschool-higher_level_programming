@@ -34,7 +34,7 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ 
+        """
             Class method that writes the JSON string representation
             of list_objs to a file.
         """
