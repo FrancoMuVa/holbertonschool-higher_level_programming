@@ -63,6 +63,9 @@ class Base():
             Class method  that returns an instance
             with all attributes already set.
         """
-        instance = cls(2, 2)
+        if cls.__name__ == "Rectangle" or cls.__name__ == "Square":
+            instance = cls(2, 2)
+        else:
+            return None
         instance.update(**dictionary)
         return instance
