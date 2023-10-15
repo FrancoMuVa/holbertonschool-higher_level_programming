@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+import io
 import unittest
+from unittest.mock import patch
 from models.rectangle import Rectangle
 
 
@@ -89,7 +91,37 @@ class TestRectangle(unittest.TestCase):
         r.height = 6
         self.assertEqual(r.area(), 36)
     
-#    def test_str(self):
-#        r1 = Rectangle(6, 2)
-#        expected = "[Rectangle] (1) 1/0 - 6/2"
-#        self.assertEqual(str(r), expected)
+    def testStr(self):
+        r1 = Rectangle(6, 2, 7, 10, 2)
+        expected = "[Rectangle] (2) 7/10 - 6/2"
+        self.assertEqual(str(r1), expected)
+
+    def testDisplay(self):
+        r1 = Rectangle(4, 2)
+        expected = "####\n####"
+        with patch("sys.stdout", new_callable=io.StringIO) as output:
+            r1.display()
+            self.assertEqual(output.getvalue().strip(), expected)
+    
+    def testUpdate(self):
+        r1 = Rectangle(2, 5, 12, 2, 8)
+        
+        r1.update(4)
+        self.assertEqual(r1.id, 4)
+        
+        r1.update(4, 8)
+        self.assertEqual(r1.width, 8)
+        
+        r1.update(4, 8, 10)
+        self.assertEqual(r1.height, 10)
+        
+        r1.update(4, 8, 10, 7)
+        self.assertEqual(r1.x, 7)
+        
+        r1.update(4, 8, 10, 7, 3)
+        self.assertEqual(r1.y, 3)
+        
+    def testToDictionary(self):
+        r1 = Rectangle(5, 7, 4, 3, 10)
+        espected = {"id": 10, "width": 5, "height": 7, "x": 4, "y": 3}
+        self.assertEqual(r1.to_dictionary(), espected)
