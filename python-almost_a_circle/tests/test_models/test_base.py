@@ -12,7 +12,7 @@ class TestBase(unittest.TestCase):
         list_of_dicts = [{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]
         expected = '[{"id": 1, "width": 10, "height": 7, "x": 2, "y": 8}]'
         self.assertEqual(Base.to_json_string(list_of_dicts), expected)
-    
+
     def testSaveToFile(self):
         r1 = Rectangle(2, 4, 2, 2, 1)
         expected = '[{"id": 1, "width": 2, "height": 4, "x": 2, "y": 2}]'
@@ -62,7 +62,7 @@ class TestBase(unittest.TestCase):
 
         self.assertEqual(s1.id, 1)
         self.assertEqual(s1.size, 3)
-    
+
     def testLoadFromFileExist(self):
         with open("Square.json", "w") as f:
             f.write('[{"id": 1, "size": 5}, {"id": 2, "size": 8}]')
@@ -76,7 +76,6 @@ class TestBase(unittest.TestCase):
 
         self.assertEqual(list_instances[1].id, 2)
         self.assertEqual(list_instances[1].size, 8)
-
 
     def testLoadFromFile(self):
         instances_list = Base.load_from_file()
