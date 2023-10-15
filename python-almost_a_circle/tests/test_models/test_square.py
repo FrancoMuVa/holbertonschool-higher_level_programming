@@ -10,6 +10,15 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             s1 = Square(True)
 
+        with self.assertRaises(TypeError):
+            s1 = Square(4.55)
+        
+        with self.assertRaises(TypeError):
+            s1 = Square({"key": 88})
+
+        with self.assertRaises(TypeError):
+            s1 = Square([2, 4, 5])
+
         with self.assertRaises(ValueError):
             s1 = Square(-5)
 
@@ -43,6 +52,19 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.size, 4)
         self.assertEqual(s1.x, 3)
         self.assertEqual(s1.y, 5)
+
+        s1.update(1, 4, 5)
+        self.assertEqual(s1.id, 1)
+        self.assertEqual(s1.size, 4)
+        self.assertEqual(s1.x, 5)
+
+        s1.update(1, 4)
+        self.assertEqual(s1.id, 1)
+        self.assertEqual(s1.size, 4)
+
+        s1.update(1)
+        self.assertEqual(s1.id, 1)
+
 
     def testUpdateKwargs(self):
         s1 = Square(5)
