@@ -16,11 +16,10 @@ if __name__ == '__main__':
         user=argv[1],
         passwd=argv[2],
         db=argv[3],
-        search=argv[4]
     )
     cur = conn_db.cursor()
     cur.execute("SELECT * FROM states WHERE name = {}\
-    ORDER BY states.id ASC".format(search))
+    ORDER BY states.id ASC".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(row)
