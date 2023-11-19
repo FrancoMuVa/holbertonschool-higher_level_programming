@@ -18,7 +18,7 @@ if __name__ == '__main__':
         db=argv[3],
     )
     cur = conn_db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = {}\
+    cur.execute("SELECT * FROM states WHERE name = '{}'\
     ORDER BY states.id ASC".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
